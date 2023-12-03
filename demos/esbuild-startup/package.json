@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm esbuild src/index.jsx --bundle --outfile=dist/out.js"
+    "build": "pnpm esbuild src/index.jsx --bundle --outfile=dist/out.js",
+    "build:tree-shaking": "pnpm esbuild src/tree-shaking/index.js --bundle --format=esm --outfile=dist/tree-shaking.js",
+    "build:bundle-lodash": "pnpm esbuild src/bundle-lodash/index.js --bundle --format=esm --outfile=dist/bundle-lodash.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "esbuild": "^0.14.18",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
