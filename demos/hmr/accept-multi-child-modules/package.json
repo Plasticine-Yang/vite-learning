@@ -1,5 +1,5 @@
 {
-  "name": "accept-single-child-module",
+  "name": "accept-multi-child-modules",
   "private": true,
   "version": "0.0.0",
   "type": "module",
