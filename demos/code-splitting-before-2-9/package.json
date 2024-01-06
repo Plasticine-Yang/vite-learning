@@ -1,0 +1,21 @@
+{
+  "name": "code-splitting-before-2-9",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^6.21.1",
+    "sort-by": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "1.0.0",
+    "vite": "2.5.4"
+  }
+}
