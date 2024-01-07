@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import ErrorPage from './error-page'
-import Contact, { action as contactAction, loader as contactLoader } from './routes/contact'
 import { action as destroyAction } from './routes/destroy'
-import EditContact, { action as editAction } from './routes/edit'
 import Index from './routes/index'
 import Root, { action as rootAction, loader as rootLoader } from './routes/root'
 
@@ -25,16 +23,12 @@ const router = createBrowserRouter([
           { index: true, element: <Index /> },
           {
             path: 'contacts/:contactId',
-            element: <Contact />,
-            loader: contactLoader,
-            action: contactAction,
+            lazy: () => import('./routes/contact'),
           },
           {
             path: 'contacts/:contactId/edit',
-            element: <EditContact />,
             errorElement: <div>Oops! There was an error when editing.</div>,
-            loader: contactLoader,
-            action: editAction,
+            lazy: () => import('./routes/edit'),
           },
           {
             path: 'contacts/:contactId/destroy',

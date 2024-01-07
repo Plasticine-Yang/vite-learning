@@ -22,7 +22,7 @@ export async function action({ request, params }) {
   })
 }
 
-export default function Contact() {
+export function Component() {
   const { contact } = useLoaderData()
 
   return (

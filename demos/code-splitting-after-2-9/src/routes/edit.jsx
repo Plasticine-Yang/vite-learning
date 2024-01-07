@@ -11,7 +11,7 @@ export async function action({ request, params }) {
   return redirect(`/contacts/${params.contactId}`)
 }
 
-export default function EditContact() {
+export function Component() {
   const { contact } = useLoaderData()
   const navigate = useNavigate()
 
